@@ -22,6 +22,8 @@ class LoginViewController: UIViewController {
         self.signInButton.addTarget(self, action: #selector(didTabSignIn), for: .touchUpInside)
         self.newUserButton.addTarget(self, action: #selector(didTabNewUser), for: .touchUpInside)
         self.forgotPasswordButton.addTarget(self, action: #selector(didTabForgotPassword), for: .touchUpInside)
+        
+        
     }
     
  
@@ -82,10 +84,32 @@ class LoginViewController: UIViewController {
     }
 
     @objc private func didTabSignIn(){
-        let vc = HomeViewController()
-        let nav = UINavigationController(rootViewController: vc)
-        nav.modalPresentationStyle = .fullScreen
-        self.present(nav, animated: false, completion: nil)
+        let loginRequest = LoginUserRequest(
+                   email: self.email.text ?? "",
+                   password: self.password.text ?? ""
+               )
+               
+
+               if !Validator.isValidEmail(for: loginRequest.email) {
+                   AlertManager.showInvalidEmailAlert(on: self)
+                   return
+               }
+               
+               if !Validator.isPasswordValid(for: loginRequest.password) {
+                   AlertManager.showInvalidPasswordAlert(on: self)
+                   return
+               }
+               
+               AuthService.shared.signIn(with: loginRequest) { error in
+                   if let error = error {
+                       AlertManager.showSignInErrorAlert(on: self, with: error)
+                       return
+                   }
+                   
+                   if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
+                       sceneDelegate.checkAuthentication()
+                   }
+               }
     }
     @objc private func didTabNewUser(){
         let vc = RegisterViewController()

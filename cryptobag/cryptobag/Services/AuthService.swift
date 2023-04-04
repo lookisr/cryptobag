@@ -64,12 +64,12 @@ class AuthService {
     }
     
     
-    public func sigOut(completation:@escaping (Error?)-> Void){
-        do{
-            try Auth.auth().signOut()
-        }catch let error{
-            completation(error)
-        }
-    }
-    
+    public func signOut(completion: @escaping (Error?)->Void) {
+           do {
+               try Auth.auth().signOut()
+               completion(nil)
+           } catch let error {
+               completion(error)
+           }
+       }
 }

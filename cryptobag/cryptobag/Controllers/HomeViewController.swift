@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
     private var activityIndicator : UIActivityIndicatorView = {
       let indicator = UIActivityIndicatorView()
         indicator.color = .systemGreen
-        indicator.style = .large
+        indicator.style = .medium
         return indicator
     }()
     
@@ -53,7 +53,17 @@ class HomeViewController: UIViewController {
     
     
     @objc private func didTabLogout(){
-        
+        AuthService.shared.signOut { [weak self] error in
+                   guard let self = self else { return }
+                   if let error = error {
+                       AlertManager.showLogoutError(on: self, with: error)
+                       return
+                   }
+                   
+                   if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
+                       sceneDelegate.checkAuthentication()
+                   }
+               }
     }
     
 
