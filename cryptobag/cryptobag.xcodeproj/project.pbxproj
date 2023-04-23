@@ -26,6 +26,7 @@
 		4496279E29DB55AA00156C6F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4496279D29DB55AA00156C6F /* FirebaseStorage */; };
 		449627A029DB6FF900156C6F /* LoginUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4496279F29DB6FF800156C6F /* LoginUserRequest.swift */; };
 		449627A229DCB6ED00156C6F /* ValidatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449627A129DCB6ED00156C6F /* ValidatorService.swift */; };
+		44CA5EDA29F58405005DB5EF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA5ED929F58405005DB5EF /* User.swift */; };
 		DD400FE629DB283A00FF480E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400FE529DB283A00FF480E /* AppDelegate.swift */; };
 		DD400FE829DB283A00FF480E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400FE729DB283A00FF480E /* SceneDelegate.swift */; };
 		DD400FEA29DB283A00FF480E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400FE929DB283A00FF480E /* ViewController.swift */; };
@@ -68,6 +69,7 @@
 		4496279229DB52E600156C6F /* RegisterUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
 		4496279F29DB6FF800156C6F /* LoginUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserRequest.swift; sourceTree = "<group>"; };
 		449627A129DCB6ED00156C6F /* ValidatorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorService.swift; sourceTree = "<group>"; };
+		44CA5ED929F58405005DB5EF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DD400FE229DB283A00FF480E /* cryptobag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptobag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD400FE529DB283A00FF480E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD400FE729DB283A00FF480E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			children = (
 				4496279229DB52E600156C6F /* RegisterUserRequest.swift */,
 				4496279F29DB6FF800156C6F /* LoginUserRequest.swift */,
+				44CA5ED929F58405005DB5EF /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				4496278029DB325F00156C6F /* RegisterViewController.swift in Sources */,
 				4496278729DB341900156C6F /* CustomTextField.swift in Sources */,
 				4496279029DB518700156C6F /* AuthService.swift in Sources */,
+				44CA5EDA29F58405005DB5EF /* User.swift in Sources */,
 				DD400FEA29DB283A00FF480E /* ViewController.swift in Sources */,
 				449627A229DCB6ED00156C6F /* ValidatorService.swift in Sources */,
 				DD400FF029DB283A00FF480E /* cryptobag.xcdatamodeld in Sources */,

@@ -28,6 +28,19 @@ class HomeViewController: UIViewController {
         self.labal.text = "123/1233"
         self.setupUI()
         
+        AuthService.shared.fetchUser { [weak self] user, error in
+                   guard let self = self else { return }
+                   if let error = error {
+                       AlertManager.showFetchingUserError(on: self, with: error)
+                       return
+                   }
+                   
+                   if let user = user {
+                       print("\(user.username)\n\(user.email)")
+                       self.labal.text = "\(user.username)\(user.email)"
+                   }
+               }
+        
     }
     
     private func setupUI(){
