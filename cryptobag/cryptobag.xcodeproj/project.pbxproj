@@ -9,14 +9,19 @@
 /* Begin PBXBuildFile section */
 		DD400FE629DB283A00FF480E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400FE529DB283A00FF480E /* AppDelegate.swift */; };
 		DD400FE829DB283A00FF480E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400FE729DB283A00FF480E /* SceneDelegate.swift */; };
-		DD400FEA29DB283A00FF480E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400FE929DB283A00FF480E /* ViewController.swift */; };
-		DD400FED29DB283A00FF480E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD400FEB29DB283A00FF480E /* Main.storyboard */; };
 		DD400FF029DB283A00FF480E /* cryptobag.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD400FEE29DB283A00FF480E /* cryptobag.xcdatamodeld */; };
 		DD400FF229DB283B00FF480E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD400FF129DB283B00FF480E /* Assets.xcassets */; };
 		DD400FF529DB283B00FF480E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD400FF329DB283B00FF480E /* LaunchScreen.storyboard */; };
 		DD40100029DB283B00FF480E /* cryptobagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400FFF29DB283B00FF480E /* cryptobagTests.swift */; };
 		DD40100A29DB283B00FF480E /* cryptobagUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40100929DB283B00FF480E /* cryptobagUITests.swift */; };
 		DD40100C29DB283B00FF480E /* cryptobagUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40100B29DB283B00FF480E /* cryptobagUITestsLaunchTests.swift */; };
+		DD40101A29DC6E4E00FF480E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40101929DC6E4E00FF480E /* NetworkService.swift */; };
+		DD40102429DC773000FF480E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DD40102329DC773000FF480E /* SnapKit */; };
+		DD40104629E3217700FF480E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40104529E3217700FF480E /* HomeView.swift */; };
+		DD40104929E67DC200FF480E /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40104829E67DC200FF480E /* DataModel.swift */; };
+		DD40104C29E67DF100FF480E /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40104B29E67DF100FF480E /* MainPresenter.swift */; };
+		DDFF651D29F03604003F64FF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DDFF651C29F03604003F64FF /* Alamofire */; };
+		DDFF654329F4033C003F64FF /* Tickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF654229F4033C003F64FF /* Tickers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +45,6 @@
 		DD400FE229DB283A00FF480E /* cryptobag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptobag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD400FE529DB283A00FF480E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD400FE729DB283A00FF480E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DD400FE929DB283A00FF480E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DD400FEC29DB283A00FF480E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD400FEF29DB283A00FF480E /* cryptobag.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = cryptobag.xcdatamodel; sourceTree = "<group>"; };
 		DD400FF129DB283B00FF480E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD400FF429DB283B00FF480E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +54,11 @@
 		DD40100529DB283B00FF480E /* cryptobagUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cryptobagUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD40100929DB283B00FF480E /* cryptobagUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cryptobagUITests.swift; sourceTree = "<group>"; };
 		DD40100B29DB283B00FF480E /* cryptobagUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cryptobagUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DD40101929DC6E4E00FF480E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		DD40104529E3217700FF480E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DD40104829E67DC200FF480E /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		DD40104B29E67DF100FF480E /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		DDFF654229F4033C003F64FF /* Tickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tickers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD40102429DC773000FF480E /* SnapKit in Frameworks */,
+				DDFF651D29F03604003F64FF /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,10 +111,10 @@
 		DD400FE429DB283A00FF480E /* cryptobag */ = {
 			isa = PBXGroup;
 			children = (
-				DD400FE529DB283A00FF480E /* AppDelegate.swift */,
-				DD400FE729DB283A00FF480E /* SceneDelegate.swift */,
-				DD400FE929DB283A00FF480E /* ViewController.swift */,
-				DD400FEB29DB283A00FF480E /* Main.storyboard */,
+				DDFF654829F57AE9003F64FF /* App */,
+				DDFF654729F57AC1003F64FF /* HomeView */,
+				DD40104729E67DB600FF480E /* Models */,
+				DD40101829DC6DFA00FF480E /* Services */,
 				DD400FF129DB283B00FF480E /* Assets.xcassets */,
 				DD400FF329DB283B00FF480E /* LaunchScreen.storyboard */,
 				DD400FF629DB283B00FF480E /* Info.plist */,
@@ -130,6 +140,65 @@
 			path = cryptobagUITests;
 			sourceTree = "<group>";
 		};
+		DD40101829DC6DFA00FF480E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DD40101929DC6E4E00FF480E /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DD40104229E3214B00FF480E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDFF654429F44D83003F64FF /* CustomViews */,
+				DD40104529E3217700FF480E /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD40104729E67DB600FF480E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD40104829E67DC200FF480E /* DataModel.swift */,
+				DDFF654229F4033C003F64FF /* Tickers.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DD40104A29E67DE400FF480E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DD40104B29E67DF100FF480E /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DDFF654429F44D83003F64FF /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		DDFF654729F57AC1003F64FF /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				DD40104229E3214B00FF480E /* View */,
+				DD40104A29E67DE400FF480E /* Presenter */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		DDFF654829F57AE9003F64FF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DD400FE729DB283A00FF480E /* SceneDelegate.swift */,
+				DD400FE529DB283A00FF480E /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +215,10 @@
 			dependencies = (
 			);
 			name = cryptobag;
+			packageProductDependencies = (
+				DD40102329DC773000FF480E /* SnapKit */,
+				DDFF651C29F03604003F64FF /* Alamofire */,
+			);
 			productName = cryptobag;
 			productReference = DD400FE229DB283A00FF480E /* cryptobag.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +291,10 @@
 				Base,
 			);
 			mainGroup = DD400FD929DB283A00FF480E;
+			packageReferences = (
+				DD40102229DC773000FF480E /* XCRemoteSwiftPackageReference "SnapKit" */,
+				DDFF651B29F03604003F64FF /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = DD400FE329DB283A00FF480E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -236,7 +313,6 @@
 			files = (
 				DD400FF529DB283B00FF480E /* LaunchScreen.storyboard in Resources */,
 				DD400FF229DB283B00FF480E /* Assets.xcassets in Resources */,
-				DD400FED29DB283A00FF480E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +337,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD400FEA29DB283A00FF480E /* ViewController.swift in Sources */,
+				DD40104929E67DC200FF480E /* DataModel.swift in Sources */,
+				DD40101A29DC6E4E00FF480E /* NetworkService.swift in Sources */,
+				DD40104629E3217700FF480E /* HomeView.swift in Sources */,
+				DD40104C29E67DF100FF480E /* MainPresenter.swift in Sources */,
 				DD400FF029DB283A00FF480E /* cryptobag.xcdatamodeld in Sources */,
 				DD400FE629DB283A00FF480E /* AppDelegate.swift in Sources */,
 				DD400FE829DB283A00FF480E /* SceneDelegate.swift in Sources */,
+				DDFF654329F4033C003F64FF /* Tickers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +381,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DD400FEB29DB283A00FF480E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DD400FEC29DB283A00FF480E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DD400FF329DB283B00FF480E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -445,7 +517,6 @@
 				INFOPLIST_FILE = cryptobag/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,7 +543,6 @@
 				INFOPLIST_FILE = cryptobag/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -600,6 +670,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DD40102229DC773000FF480E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		DDFF651B29F03604003F64FF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DD40102329DC773000FF480E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD40102229DC773000FF480E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		DDFF651C29F03604003F64FF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDFF651B29F03604003F64FF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		DD400FEE29DB283A00FF480E /* cryptobag.xcdatamodeld */ = {
