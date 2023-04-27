@@ -6,9 +6,10 @@
 //
 
 import Foundation
-public struct CryptoCurrencys: Decodable {
-    public let tickers: [Ticker]
-}
+//public struct CryptoCurrencys: Decodable {
+//    public let tickers: [Ticker]
+//}
+
 /// Coin Ticker
 
 public struct Ticker: Decodable {
@@ -48,7 +49,7 @@ public struct Ticker: Decodable {
     /// Last update time
     public let lastUpdated: String
     
-    private let quotes: [String: Quote]
+    public let quotes: [String: Quote]
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -67,7 +68,7 @@ public struct Ticker: Decodable {
     public struct Quote: Codable, Equatable {
         
         /// Price
-        public let price: Decimal
+        public let price: Double
         
         /// Volume from last 24h
         public let volume24h: Decimal
@@ -134,4 +135,8 @@ public struct Ticker: Decodable {
             case percentFromPriceAth = "percent_from_price_ath"
         }
     }
+}
+struct BasicCurrencyInfo {
+    let name: String
+    let symbol: String
 }

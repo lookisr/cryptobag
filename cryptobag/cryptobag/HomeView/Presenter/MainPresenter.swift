@@ -7,24 +7,41 @@
 
 import Foundation
 
-protocol HomeViewDelegate: NSObjectProtocol {
-    
+//protocol MainViewProtocol: AnyObject {
+//    func updateView()
+//    func updateCell(for indexPath: IndexPath)
+//    func updateView(withLoader isLoading: Bool)
+//}
+
+protocol MainPresenterProtocol {
+    var tickers: [Ticker] {get}
+    var mainView: MainViewController? {get set}
+    func loadView()
+    func model(for indexPath: Int) -> Ticker
 }
 
 
-class MainPresenter {
+class MainPresenter: MainPresenterProtocol {
     private let dataService: DataModel
-    weak private var homeViewDelegate: HomeViewDelegate?
-    
+    var tickers: [Ticker] = []
+    weak var mainView: MainViewController?
+
     init(dataService: DataModel) {
         self.dataService = dataService
     }
-    func setViewDelegate(homeViewDelegate: HomeViewDelegate?){
-        self.homeViewDelegate = homeViewDelegate
+
+    func loadView() {
+        dataService.fetchDataTickers {result in
+            self.mainView?.updateView()
+            self.tickers = result
+            print("trying to load view")
+            self.mainView?.updateView()
+        }
     }
 
-    func getTickers(){
-        DataModel.shared.fetchDataTickers()
+    func model(for indexPath: Int) -> Ticker {
+        tickers[indexPath]
     }
+    
 }
 

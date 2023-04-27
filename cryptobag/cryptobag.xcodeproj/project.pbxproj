@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD11D60329FA6ADE00A92C1B /* Mulish-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD11D60229FA6A6A00A92C1B /* Mulish-Italic-VariableFont_wght.ttf */; };
+		DD11D60429FA6AE300A92C1B /* Mulish-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD11D60129FA6A6A00A92C1B /* Mulish-VariableFont_wght.ttf */; };
 		DD400FE629DB283A00FF480E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400FE529DB283A00FF480E /* AppDelegate.swift */; };
 		DD400FE829DB283A00FF480E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400FE729DB283A00FF480E /* SceneDelegate.swift */; };
 		DD400FF029DB283A00FF480E /* cryptobag.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD400FEE29DB283A00FF480E /* cryptobag.xcdatamodeld */; };
@@ -18,10 +20,13 @@
 		DD40101A29DC6E4E00FF480E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40101929DC6E4E00FF480E /* NetworkService.swift */; };
 		DD40102429DC773000FF480E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DD40102329DC773000FF480E /* SnapKit */; };
 		DD40104629E3217700FF480E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40104529E3217700FF480E /* HomeView.swift */; };
-		DD40104929E67DC200FF480E /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40104829E67DC200FF480E /* DataModel.swift */; };
+		DD40104929E67DC200FF480E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40104829E67DC200FF480E /* DataService.swift */; };
 		DD40104C29E67DF100FF480E /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40104B29E67DF100FF480E /* MainPresenter.swift */; };
 		DDFF651D29F03604003F64FF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DDFF651C29F03604003F64FF /* Alamofire */; };
 		DDFF654329F4033C003F64FF /* Tickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF654229F4033C003F64FF /* Tickers.swift */; };
+		DDFF654A29F65EDF003F64FF /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF654929F65EDF003F64FF /* CustomCell.swift */; };
+		DDFF654C29F6641C003F64FF /* CoinsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF654B29F6641C003F64FF /* CoinsModel.swift */; };
+		DDFF654E29F6F138003F64FF /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF654D29F6F138003F64FF /* Assembler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD11D60129FA6A6A00A92C1B /* Mulish-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mulish-VariableFont_wght.ttf"; path = "../../../../../Downloads/Mulish/Mulish-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		DD11D60229FA6A6A00A92C1B /* Mulish-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mulish-Italic-VariableFont_wght.ttf"; path = "../../../../../Downloads/Mulish/Mulish-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		DD400FE229DB283A00FF480E /* cryptobag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptobag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD400FE529DB283A00FF480E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD400FE729DB283A00FF480E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,9 +63,12 @@
 		DD40100B29DB283B00FF480E /* cryptobagUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cryptobagUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DD40101929DC6E4E00FF480E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		DD40104529E3217700FF480E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		DD40104829E67DC200FF480E /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		DD40104829E67DC200FF480E /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		DD40104B29E67DF100FF480E /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		DDFF654229F4033C003F64FF /* Tickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tickers.swift; sourceTree = "<group>"; };
+		DDFF654929F65EDF003F64FF /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		DDFF654B29F6641C003F64FF /* CoinsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsModel.swift; sourceTree = "<group>"; };
+		DDFF654D29F6F138003F64FF /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +98,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD11D60029FA6A5600A92C1B /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DD11D60229FA6A6A00A92C1B /* Mulish-Italic-VariableFont_wght.ttf */,
+				DD11D60129FA6A6A00A92C1B /* Mulish-VariableFont_wght.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		DD400FD929DB283A00FF480E = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +130,7 @@
 		DD400FE429DB283A00FF480E /* cryptobag */ = {
 			isa = PBXGroup;
 			children = (
+				DD11D60029FA6A5600A92C1B /* fonts */,
 				DDFF654829F57AE9003F64FF /* App */,
 				DDFF654729F57AC1003F64FF /* HomeView */,
 				DD40104729E67DB600FF480E /* Models */,
@@ -160,8 +180,9 @@
 		DD40104729E67DB600FF480E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DD40104829E67DC200FF480E /* DataModel.swift */,
+				DD40104829E67DC200FF480E /* DataService.swift */,
 				DDFF654229F4033C003F64FF /* Tickers.swift */,
+				DDFF654B29F6641C003F64FF /* CoinsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				DD40104B29E67DF100FF480E /* MainPresenter.swift */,
+				DDFF654D29F6F138003F64FF /* Assembler.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -177,6 +199,7 @@
 		DDFF654429F44D83003F64FF /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				DDFF654929F65EDF003F64FF /* CustomCell.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -312,7 +335,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD400FF529DB283B00FF480E /* LaunchScreen.storyboard in Resources */,
+				DD11D60429FA6AE300A92C1B /* Mulish-VariableFont_wght.ttf in Resources */,
 				DD400FF229DB283B00FF480E /* Assets.xcassets in Resources */,
+				DD11D60329FA6ADE00A92C1B /* Mulish-Italic-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,10 +362,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD40104929E67DC200FF480E /* DataModel.swift in Sources */,
+				DD40104929E67DC200FF480E /* DataService.swift in Sources */,
 				DD40101A29DC6E4E00FF480E /* NetworkService.swift in Sources */,
+				DDFF654C29F6641C003F64FF /* CoinsModel.swift in Sources */,
 				DD40104629E3217700FF480E /* HomeView.swift in Sources */,
 				DD40104C29E67DF100FF480E /* MainPresenter.swift in Sources */,
+				DDFF654E29F6F138003F64FF /* Assembler.swift in Sources */,
+				DDFF654A29F65EDF003F64FF /* CustomCell.swift in Sources */,
 				DD400FF029DB283A00FF480E /* cryptobag.xcdatamodeld in Sources */,
 				DD400FE629DB283A00FF480E /* AppDelegate.swift in Sources */,
 				DD400FE829DB283A00FF480E /* SceneDelegate.swift in Sources */,
