@@ -12,7 +12,9 @@ import FirebaseFirestore
 class AuthService {
     public static let shared = AuthService()
     
-    private init (){}
+    private init (){
+        
+    }
     
     public func registerUser(with userRequest:RegisterUserRequest, completion:@escaping(Bool,Error?)-> Void){
         
@@ -72,6 +74,7 @@ class AuthService {
                completion(error)
            }
        }
+    
     public func forgotPassword(with email: String, completion: @escaping (Error?) -> Void) {
            Auth.auth().sendPasswordReset(withEmail: email) { error in
                completion(error)
