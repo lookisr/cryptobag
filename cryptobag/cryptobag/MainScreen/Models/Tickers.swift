@@ -16,9 +16,12 @@ public struct Ticker: Decodable {
     
     /// Coin id, eg. btc-bitcoin
     public let id: String
-    
+        
     /// Coin name, eg. Bitcoin
     public let name: String
+    
+    /// Coin logo, eg. Bitcoin
+    public var logo: String?
     
     /// Coin symbol, eg. BTC
     public let symbol: String
@@ -56,6 +59,7 @@ public struct Ticker: Decodable {
         case name
         case symbol
         case rank
+        case logo
         case circulatingSupply = "circulating_supply"
         case totalSupply = "total_supply"
         case maxSupply = "max_supply"
@@ -139,4 +143,7 @@ public struct Ticker: Decodable {
 struct BasicCurrencyInfo {
     let name: String
     let symbol: String
+    let logo: String
+    let price: String
+    let change1d: String
 }

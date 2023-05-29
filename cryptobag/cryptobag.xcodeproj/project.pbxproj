@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		DD11D60329FA6ADE00A92C1B /* Mulish-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD11D60229FA6A6A00A92C1B /* Mulish-Italic-VariableFont_wght.ttf */; };
 		DD11D60429FA6AE300A92C1B /* Mulish-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD11D60129FA6A6A00A92C1B /* Mulish-VariableFont_wght.ttf */; };
+		DD11D60729FC325700A92C1B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DD11D60629FC325700A92C1B /* Kingfisher */; };
+		DD11D60929FC404F00A92C1B /* UIImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD11D60829FC404F00A92C1B /* UIImageLoader.swift */; };
+		DD11D60B29FC46D000A92C1B /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD11D60A29FC46CF00A92C1B /* CoinData.swift */; };
+		DD11D63129FEE76700A92C1B /* 3524335.png in Resources */ = {isa = PBXBuildFile; fileRef = DD11D63029FEE76700A92C1B /* 3524335.png */; };
+		DD3E56EB2A23C71600ABC01B /* GraphModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3E56EA2A23C71600ABC01B /* GraphModel.swift */; };
 		DD400FE629DB283A00FF480E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400FE529DB283A00FF480E /* AppDelegate.swift */; };
 		DD400FE829DB283A00FF480E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400FE729DB283A00FF480E /* SceneDelegate.swift */; };
 		DD400FF029DB283A00FF480E /* cryptobag.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD400FEE29DB283A00FF480E /* cryptobag.xcdatamodeld */; };
@@ -22,6 +27,10 @@
 		DD40104629E3217700FF480E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40104529E3217700FF480E /* HomeView.swift */; };
 		DD40104929E67DC200FF480E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40104829E67DC200FF480E /* DataService.swift */; };
 		DD40104C29E67DF100FF480E /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40104B29E67DF100FF480E /* MainPresenter.swift */; };
+		DD88B2692A1FD09D00698501 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88B2682A1FD09D00698501 /* ImageHelper.swift */; };
+		DD88B26C2A1FD81400698501 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88B26B2A1FD81400698501 /* Router.swift */; };
+		DD88B26F2A1FDD7F00698501 /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88B26E2A1FDD7F00698501 /* StockViewController.swift */; };
+		DD88B2742A20935C00698501 /* StockViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88B2732A20935C00698501 /* StockViewPresenter.swift */; };
 		DDFF651D29F03604003F64FF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DDFF651C29F03604003F64FF /* Alamofire */; };
 		DDFF654329F4033C003F64FF /* Tickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF654229F4033C003F64FF /* Tickers.swift */; };
 		DDFF654A29F65EDF003F64FF /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF654929F65EDF003F64FF /* CustomCell.swift */; };
@@ -49,6 +58,10 @@
 /* Begin PBXFileReference section */
 		DD11D60129FA6A6A00A92C1B /* Mulish-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mulish-VariableFont_wght.ttf"; path = "../../../../../Downloads/Mulish/Mulish-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		DD11D60229FA6A6A00A92C1B /* Mulish-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mulish-Italic-VariableFont_wght.ttf"; path = "../../../../../Downloads/Mulish/Mulish-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		DD11D60829FC404F00A92C1B /* UIImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageLoader.swift; sourceTree = "<group>"; };
+		DD11D60A29FC46CF00A92C1B /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
+		DD11D63029FEE76700A92C1B /* 3524335.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3524335.png; path = ../../../../Downloads/3524335.png; sourceTree = "<group>"; };
+		DD3E56EA2A23C71600ABC01B /* GraphModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphModel.swift; sourceTree = "<group>"; };
 		DD400FE229DB283A00FF480E /* cryptobag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptobag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD400FE529DB283A00FF480E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD400FE729DB283A00FF480E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +78,10 @@
 		DD40104529E3217700FF480E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DD40104829E67DC200FF480E /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		DD40104B29E67DF100FF480E /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		DD88B2682A1FD09D00698501 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		DD88B26B2A1FD81400698501 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		DD88B26E2A1FDD7F00698501 /* StockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewController.swift; sourceTree = "<group>"; };
+		DD88B2732A20935C00698501 /* StockViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewPresenter.swift; sourceTree = "<group>"; };
 		DDFF654229F4033C003F64FF /* Tickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tickers.swift; sourceTree = "<group>"; };
 		DDFF654929F65EDF003F64FF /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		DDFF654B29F6641C003F64FF /* CoinsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsModel.swift; sourceTree = "<group>"; };
@@ -76,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD11D60729FC325700A92C1B /* Kingfisher in Frameworks */,
 				DD40102429DC773000FF480E /* SnapKit in Frameworks */,
 				DDFF651D29F03604003F64FF /* Alamofire in Frameworks */,
 			);
@@ -107,6 +125,16 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
+		DD3E56EC2A251F3300ABC01B /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DD40104729E67DB600FF480E /* Models */,
+				DD40101829DC6DFA00FF480E /* Services */,
+				DDFF654729F57AC1003F64FF /* HomeView */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
 		DD400FD929DB283A00FF480E = {
 			isa = PBXGroup;
 			children = (
@@ -130,12 +158,13 @@
 		DD400FE429DB283A00FF480E /* cryptobag */ = {
 			isa = PBXGroup;
 			children = (
+				DD3E56EC2A251F3300ABC01B /* MainScreen */,
+				DD88B26A2A1FD80900698501 /* Routers */,
+				DD88B26D2A1FDD6200698501 /* StockView */,
 				DD11D60029FA6A5600A92C1B /* fonts */,
 				DDFF654829F57AE9003F64FF /* App */,
-				DDFF654729F57AC1003F64FF /* HomeView */,
-				DD40104729E67DB600FF480E /* Models */,
-				DD40101829DC6DFA00FF480E /* Services */,
 				DD400FF129DB283B00FF480E /* Assets.xcassets */,
+				DD11D63029FEE76700A92C1B /* 3524335.png */,
 				DD400FF329DB283B00FF480E /* LaunchScreen.storyboard */,
 				DD400FF629DB283B00FF480E /* Info.plist */,
 				DD400FEE29DB283A00FF480E /* cryptobag.xcdatamodeld */,
@@ -164,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				DD40101929DC6E4E00FF480E /* NetworkService.swift */,
+				DD88B2682A1FD09D00698501 /* ImageHelper.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -183,6 +213,7 @@
 				DD40104829E67DC200FF480E /* DataService.swift */,
 				DDFF654229F4033C003F64FF /* Tickers.swift */,
 				DDFF654B29F6641C003F64FF /* CoinsModel.swift */,
+				DD11D60A29FC46CF00A92C1B /* CoinData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,7 +222,48 @@
 			isa = PBXGroup;
 			children = (
 				DD40104B29E67DF100FF480E /* MainPresenter.swift */,
-				DDFF654D29F6F138003F64FF /* Assembler.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DD88B26A2A1FD80900698501 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				DD88B26B2A1FD81400698501 /* Router.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		DD88B26D2A1FDD6200698501 /* StockView */ = {
+			isa = PBXGroup;
+			children = (
+				DD88B2722A20934A00698501 /* Presenter */,
+				DD88B2712A20934000698501 /* Model */,
+				DD88B2702A20932F00698501 /* View */,
+			);
+			path = StockView;
+			sourceTree = "<group>";
+		};
+		DD88B2702A20932F00698501 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD88B26E2A1FDD7F00698501 /* StockViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD88B2712A20934000698501 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD3E56EA2A23C71600ABC01B /* GraphModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DD88B2722A20934A00698501 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DD88B2732A20935C00698501 /* StockViewPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -200,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				DDFF654929F65EDF003F64FF /* CustomCell.swift */,
+				DD11D60829FC404F00A92C1B /* UIImageLoader.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -216,6 +289,7 @@
 		DDFF654829F57AE9003F64FF /* App */ = {
 			isa = PBXGroup;
 			children = (
+				DDFF654D29F6F138003F64FF /* Assembler.swift */,
 				DD400FE729DB283A00FF480E /* SceneDelegate.swift */,
 				DD400FE529DB283A00FF480E /* AppDelegate.swift */,
 			);
@@ -241,6 +315,7 @@
 			packageProductDependencies = (
 				DD40102329DC773000FF480E /* SnapKit */,
 				DDFF651C29F03604003F64FF /* Alamofire */,
+				DD11D60629FC325700A92C1B /* Kingfisher */,
 			);
 			productName = cryptobag;
 			productReference = DD400FE229DB283A00FF480E /* cryptobag.app */;
@@ -317,6 +392,7 @@
 			packageReferences = (
 				DD40102229DC773000FF480E /* XCRemoteSwiftPackageReference "SnapKit" */,
 				DDFF651B29F03604003F64FF /* XCRemoteSwiftPackageReference "Alamofire" */,
+				DD11D60529FC325700A92C1B /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = DD400FE329DB283A00FF480E /* Products */;
 			projectDirPath = "";
@@ -334,6 +410,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD11D63129FEE76700A92C1B /* 3524335.png in Resources */,
 				DD400FF529DB283B00FF480E /* LaunchScreen.storyboard in Resources */,
 				DD11D60429FA6AE300A92C1B /* Mulish-VariableFont_wght.ttf in Resources */,
 				DD400FF229DB283B00FF480E /* Assets.xcassets in Resources */,
@@ -362,17 +439,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD11D60B29FC46D000A92C1B /* CoinData.swift in Sources */,
 				DD40104929E67DC200FF480E /* DataService.swift in Sources */,
 				DD40101A29DC6E4E00FF480E /* NetworkService.swift in Sources */,
 				DDFF654C29F6641C003F64FF /* CoinsModel.swift in Sources */,
 				DD40104629E3217700FF480E /* HomeView.swift in Sources */,
 				DD40104C29E67DF100FF480E /* MainPresenter.swift in Sources */,
 				DDFF654E29F6F138003F64FF /* Assembler.swift in Sources */,
+				DD88B26F2A1FDD7F00698501 /* StockViewController.swift in Sources */,
+				DD3E56EB2A23C71600ABC01B /* GraphModel.swift in Sources */,
+				DD88B26C2A1FD81400698501 /* Router.swift in Sources */,
+				DD11D60929FC404F00A92C1B /* UIImageLoader.swift in Sources */,
 				DDFF654A29F65EDF003F64FF /* CustomCell.swift in Sources */,
 				DD400FF029DB283A00FF480E /* cryptobag.xcdatamodeld in Sources */,
 				DD400FE629DB283A00FF480E /* AppDelegate.swift in Sources */,
 				DD400FE829DB283A00FF480E /* SceneDelegate.swift in Sources */,
+				DD88B2742A20935C00698501 /* StockViewPresenter.swift in Sources */,
 				DDFF654329F4033C003F64FF /* Tickers.swift in Sources */,
+				DD88B2692A1FD09D00698501 /* ImageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +784,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DD11D60529FC325700A92C1B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		DD40102229DC773000FF480E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -719,6 +811,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DD11D60629FC325700A92C1B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD11D60529FC325700A92C1B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		DD40102329DC773000FF480E /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DD40102229DC773000FF480E /* XCRemoteSwiftPackageReference "SnapKit" */;
