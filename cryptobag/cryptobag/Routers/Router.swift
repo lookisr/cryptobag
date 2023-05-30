@@ -18,13 +18,14 @@ protocol MainRouterProtocol: AnyObject {
 }
 
 class MainRouter: MainRouterProtocol {
+
+    
     weak var stockView: StockViewController?
     weak var homeView: MainViewController?
-    
+    weak var authView: RegisterViewController?
     func moveToPortfolio() {
         
     }
-    
     func moveToProfileSettings() {
         
     }
@@ -33,6 +34,7 @@ class MainRouter: MainRouterProtocol {
     func moveToDetailedScreen(with ticker: Ticker) {
         let stockScreen = MainModuleAssembly.configureStockScreen(ticker: ticker)
         homeView?.navigationController?.pushViewController(stockScreen, animated: true)
+        homeView?.navigationController?.navigationBar.isHidden = false
     }
 
 

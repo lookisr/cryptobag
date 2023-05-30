@@ -1,0 +1,818 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4496276F29DB2F8E00156C6F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4496276E29DB2F8E00156C6F /* SnapKit */; };
+		4496277C29DB321800156C6F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4496277B29DB321800156C6F /* HomeViewController.swift */; };
+		4496277E29DB323C00156C6F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4496277D29DB323C00156C6F /* LoginViewController.swift */; };
+		4496278029DB325F00156C6F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4496277F29DB325F00156C6F /* RegisterViewController.swift */; };
+		4496278329DB33D000156C6F /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4496278229DB33D000156C6F /* AuthView.swift */; };
+		4496278529DB33F300156C6F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4496278429DB33F200156C6F /* CustomButton.swift */; };
+		4496278729DB341900156C6F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4496278629DB341900156C6F /* CustomTextField.swift */; };
+		4496278929DB34C000156C6F /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4496278829DB34C000156C6F /* ForgotPasswordViewController.swift */; };
+		4496278C29DB485300156C6F /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4496278B29DB485300156C6F /* AlertManager.swift */; };
+		4496279029DB518700156C6F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4496278F29DB518700156C6F /* AuthService.swift */; };
+		4496279329DB52E600156C6F /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4496279229DB52E600156C6F /* RegisterUserRequest.swift */; };
+		4496279629DB55AA00156C6F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4496279529DB55AA00156C6F /* FirebaseAuth */; };
+		4496279829DB55AA00156C6F /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4496279729DB55AA00156C6F /* FirebaseDatabase */; };
+		4496279A29DB55AA00156C6F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4496279929DB55AA00156C6F /* FirebaseFirestore */; };
+		4496279C29DB55AA00156C6F /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 4496279B29DB55AA00156C6F /* FirebaseFunctions */; };
+		4496279E29DB55AA00156C6F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4496279D29DB55AA00156C6F /* FirebaseStorage */; };
+		449627A029DB6FF900156C6F /* LoginUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4496279F29DB6FF800156C6F /* LoginUserRequest.swift */; };
+		449627A229DCB6ED00156C6F /* ValidatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449627A129DCB6ED00156C6F /* ValidatorService.swift */; };
+		44AFD1E32A24F06A00AF54F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44AFD1E22A24F06A00AF54F0 /* GoogleService-Info.plist */; };
+		44AFD1E52A24F18300AF54F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44AFD1E42A24F18300AF54F0 /* GoogleService-Info.plist */; };
+		44AFD1E82A24F46D00AF54F0 /* HomeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AFD1E72A24F46D00AF54F0 /* HomeViewPresenter.swift */; };
+		44AFD1EA2A25078E00AF54F0 /* LoginViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AFD1E92A25078E00AF54F0 /* LoginViewPresenter.swift */; };
+		44AFD1EC2A2512B600AF54F0 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AFD1EB2A2512B600AF54F0 /* RegisterPresenter.swift */; };
+		44AFD1EE2A2513F000AF54F0 /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AFD1ED2A2513F000AF54F0 /* ForgotPasswordPresenter.swift */; };
+		44CA5EDA29F58405005DB5EF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA5ED929F58405005DB5EF /* User.swift */; };
+		DD400FE629DB283A00FF480E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400FE529DB283A00FF480E /* AppDelegate.swift */; };
+		DD400FE829DB283A00FF480E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400FE729DB283A00FF480E /* SceneDelegate.swift */; };
+		DD400FEA29DB283A00FF480E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400FE929DB283A00FF480E /* ViewController.swift */; };
+		DD400FF029DB283A00FF480E /* cryptobag.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD400FEE29DB283A00FF480E /* cryptobag.xcdatamodeld */; };
+		DD400FF229DB283B00FF480E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD400FF129DB283B00FF480E /* Assets.xcassets */; };
+		DD400FF529DB283B00FF480E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD400FF329DB283B00FF480E /* LaunchScreen.storyboard */; };
+		DD40100029DB283B00FF480E /* cryptobagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400FFF29DB283B00FF480E /* cryptobagTests.swift */; };
+		DD40100A29DB283B00FF480E /* cryptobagUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40100929DB283B00FF480E /* cryptobagUITests.swift */; };
+		DD40100C29DB283B00FF480E /* cryptobagUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40100B29DB283B00FF480E /* cryptobagUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD400FFC29DB283B00FF480E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD400FDA29DB283A00FF480E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD400FE129DB283A00FF480E;
+			remoteInfo = cryptobag;
+		};
+		DD40100629DB283B00FF480E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD400FDA29DB283A00FF480E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD400FE129DB283A00FF480E;
+			remoteInfo = cryptobag;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4496277B29DB321800156C6F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4496277D29DB323C00156C6F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4496277F29DB325F00156C6F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		4496278229DB33D000156C6F /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		4496278429DB33F200156C6F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		4496278629DB341900156C6F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		4496278829DB34C000156C6F /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		4496278B29DB485300156C6F /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		4496278F29DB518700156C6F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		4496279229DB52E600156C6F /* RegisterUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
+		4496279F29DB6FF800156C6F /* LoginUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserRequest.swift; sourceTree = "<group>"; };
+		449627A129DCB6ED00156C6F /* ValidatorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorService.swift; sourceTree = "<group>"; };
+		44AFD1E22A24F06A00AF54F0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		44AFD1E42A24F18300AF54F0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		44AFD1E72A24F46D00AF54F0 /* HomeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewPresenter.swift; sourceTree = "<group>"; };
+		44AFD1E92A25078E00AF54F0 /* LoginViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenter.swift; sourceTree = "<group>"; };
+		44AFD1EB2A2512B600AF54F0 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		44AFD1ED2A2513F000AF54F0 /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
+		44CA5ED929F58405005DB5EF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DD400FE229DB283A00FF480E /* cryptobag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptobag.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD400FE529DB283A00FF480E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DD400FE729DB283A00FF480E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DD400FE929DB283A00FF480E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD400FEF29DB283A00FF480E /* cryptobag.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = cryptobag.xcdatamodel; sourceTree = "<group>"; };
+		DD400FF129DB283B00FF480E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD400FF429DB283B00FF480E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DD400FF629DB283B00FF480E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD400FFB29DB283B00FF480E /* cryptobagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cryptobagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD400FFF29DB283B00FF480E /* cryptobagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cryptobagTests.swift; sourceTree = "<group>"; };
+		DD40100529DB283B00FF480E /* cryptobagUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cryptobagUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD40100929DB283B00FF480E /* cryptobagUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cryptobagUITests.swift; sourceTree = "<group>"; };
+		DD40100B29DB283B00FF480E /* cryptobagUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cryptobagUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD400FDF29DB283A00FF480E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4496279829DB55AA00156C6F /* FirebaseDatabase in Frameworks */,
+				4496279A29DB55AA00156C6F /* FirebaseFirestore in Frameworks */,
+				4496279C29DB55AA00156C6F /* FirebaseFunctions in Frameworks */,
+				4496276F29DB2F8E00156C6F /* SnapKit in Frameworks */,
+				4496279629DB55AA00156C6F /* FirebaseAuth in Frameworks */,
+				4496279E29DB55AA00156C6F /* FirebaseStorage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD400FF829DB283B00FF480E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD40100229DB283B00FF480E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4496277029DB2FAB00156C6F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DD400FE529DB283A00FF480E /* AppDelegate.swift */,
+				DD400FE729DB283A00FF480E /* SceneDelegate.swift */,
+				DD400FF629DB283B00FF480E /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4496277A29DB31DD00156C6F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4496277B29DB321800156C6F /* HomeViewController.swift */,
+				4496277D29DB323C00156C6F /* LoginViewController.swift */,
+				4496277F29DB325F00156C6F /* RegisterViewController.swift */,
+				4496278829DB34C000156C6F /* ForgotPasswordViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4496278129DB33BE00156C6F /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				4496278229DB33D000156C6F /* AuthView.swift */,
+				4496278429DB33F200156C6F /* CustomButton.swift */,
+				4496278629DB341900156C6F /* CustomTextField.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		4496278A29DB482F00156C6F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4496278B29DB485300156C6F /* AlertManager.swift */,
+				4496278F29DB518700156C6F /* AuthService.swift */,
+				449627A129DCB6ED00156C6F /* ValidatorService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4496279129DB52A600156C6F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4496279229DB52E600156C6F /* RegisterUserRequest.swift */,
+				4496279F29DB6FF800156C6F /* LoginUserRequest.swift */,
+				44CA5ED929F58405005DB5EF /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		44AFD1E62A24F42E00AF54F0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				44AFD1E72A24F46D00AF54F0 /* HomeViewPresenter.swift */,
+				44AFD1E92A25078E00AF54F0 /* LoginViewPresenter.swift */,
+				44AFD1EB2A2512B600AF54F0 /* RegisterPresenter.swift */,
+				44AFD1ED2A2513F000AF54F0 /* ForgotPasswordPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		44AFD1EF2A25163000AF54F0 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				44AFD1E62A24F42E00AF54F0 /* Presenter */,
+				4496279129DB52A600156C6F /* Models */,
+				4496278A29DB482F00156C6F /* Services */,
+				4496278129DB33BE00156C6F /* CustomView */,
+				4496277A29DB31DD00156C6F /* View */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		DD400FD929DB283A00FF480E = {
+			isa = PBXGroup;
+			children = (
+				DD400FE429DB283A00FF480E /* cryptobag */,
+				DD400FFE29DB283B00FF480E /* cryptobagTests */,
+				DD40100829DB283B00FF480E /* cryptobagUITests */,
+				DD400FE329DB283A00FF480E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD400FE329DB283A00FF480E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD400FE229DB283A00FF480E /* cryptobag.app */,
+				DD400FFB29DB283B00FF480E /* cryptobagTests.xctest */,
+				DD40100529DB283B00FF480E /* cryptobagUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD400FE429DB283A00FF480E /* cryptobag */ = {
+			isa = PBXGroup;
+			children = (
+				44AFD1EF2A25163000AF54F0 /* Auth */,
+				DD400FEE29DB283A00FF480E /* cryptobag.xcdatamodeld */,
+				4496277029DB2FAB00156C6F /* App */,
+				DD400FE929DB283A00FF480E /* ViewController.swift */,
+				DD400FF129DB283B00FF480E /* Assets.xcassets */,
+				DD400FF329DB283B00FF480E /* LaunchScreen.storyboard */,
+				44AFD1E42A24F18300AF54F0 /* GoogleService-Info.plist */,
+				44AFD1E22A24F06A00AF54F0 /* GoogleService-Info.plist */,
+			);
+			path = cryptobag;
+			sourceTree = "<group>";
+		};
+		DD400FFE29DB283B00FF480E /* cryptobagTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD400FFF29DB283B00FF480E /* cryptobagTests.swift */,
+			);
+			path = cryptobagTests;
+			sourceTree = "<group>";
+		};
+		DD40100829DB283B00FF480E /* cryptobagUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DD40100929DB283B00FF480E /* cryptobagUITests.swift */,
+				DD40100B29DB283B00FF480E /* cryptobagUITestsLaunchTests.swift */,
+			);
+			path = cryptobagUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD400FE129DB283A00FF480E /* cryptobag */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD40100F29DB283B00FF480E /* Build configuration list for PBXNativeTarget "cryptobag" */;
+			buildPhases = (
+				DD400FDE29DB283A00FF480E /* Sources */,
+				DD400FDF29DB283A00FF480E /* Frameworks */,
+				DD400FE029DB283A00FF480E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cryptobag;
+			packageProductDependencies = (
+				4496276E29DB2F8E00156C6F /* SnapKit */,
+				4496279529DB55AA00156C6F /* FirebaseAuth */,
+				4496279729DB55AA00156C6F /* FirebaseDatabase */,
+				4496279929DB55AA00156C6F /* FirebaseFirestore */,
+				4496279B29DB55AA00156C6F /* FirebaseFunctions */,
+				4496279D29DB55AA00156C6F /* FirebaseStorage */,
+			);
+			productName = cryptobag;
+			productReference = DD400FE229DB283A00FF480E /* cryptobag.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DD400FFA29DB283B00FF480E /* cryptobagTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD40101229DB283B00FF480E /* Build configuration list for PBXNativeTarget "cryptobagTests" */;
+			buildPhases = (
+				DD400FF729DB283B00FF480E /* Sources */,
+				DD400FF829DB283B00FF480E /* Frameworks */,
+				DD400FF929DB283B00FF480E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD400FFD29DB283B00FF480E /* PBXTargetDependency */,
+			);
+			name = cryptobagTests;
+			productName = cryptobagTests;
+			productReference = DD400FFB29DB283B00FF480E /* cryptobagTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DD40100429DB283B00FF480E /* cryptobagUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD40101529DB283B00FF480E /* Build configuration list for PBXNativeTarget "cryptobagUITests" */;
+			buildPhases = (
+				DD40100129DB283B00FF480E /* Sources */,
+				DD40100229DB283B00FF480E /* Frameworks */,
+				DD40100329DB283B00FF480E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD40100729DB283B00FF480E /* PBXTargetDependency */,
+			);
+			name = cryptobagUITests;
+			productName = cryptobagUITests;
+			productReference = DD40100529DB283B00FF480E /* cryptobagUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD400FDA29DB283A00FF480E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					DD400FE129DB283A00FF480E = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					DD400FFA29DB283B00FF480E = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = DD400FE129DB283A00FF480E;
+					};
+					DD40100429DB283B00FF480E = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = DD400FE129DB283A00FF480E;
+					};
+				};
+			};
+			buildConfigurationList = DD400FDD29DB283A00FF480E /* Build configuration list for PBXProject "cryptobag" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD400FD929DB283A00FF480E;
+			packageReferences = (
+				4496276D29DB2F8E00156C6F /* XCRemoteSwiftPackageReference "SnapKit" */,
+				4496279429DB55AA00156C6F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = DD400FE329DB283A00FF480E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD400FE129DB283A00FF480E /* cryptobag */,
+				DD400FFA29DB283B00FF480E /* cryptobagTests */,
+				DD40100429DB283B00FF480E /* cryptobagUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD400FE029DB283A00FF480E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD400FF529DB283B00FF480E /* LaunchScreen.storyboard in Resources */,
+				44AFD1E52A24F18300AF54F0 /* GoogleService-Info.plist in Resources */,
+				44AFD1E32A24F06A00AF54F0 /* GoogleService-Info.plist in Resources */,
+				DD400FF229DB283B00FF480E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD400FF929DB283B00FF480E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD40100329DB283B00FF480E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD400FDE29DB283A00FF480E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4496277E29DB323C00156C6F /* LoginViewController.swift in Sources */,
+				44AFD1EA2A25078E00AF54F0 /* LoginViewPresenter.swift in Sources */,
+				4496277C29DB321800156C6F /* HomeViewController.swift in Sources */,
+				4496278929DB34C000156C6F /* ForgotPasswordViewController.swift in Sources */,
+				4496278529DB33F300156C6F /* CustomButton.swift in Sources */,
+				44AFD1E82A24F46D00AF54F0 /* HomeViewPresenter.swift in Sources */,
+				4496278029DB325F00156C6F /* RegisterViewController.swift in Sources */,
+				4496278729DB341900156C6F /* CustomTextField.swift in Sources */,
+				4496279029DB518700156C6F /* AuthService.swift in Sources */,
+				44CA5EDA29F58405005DB5EF /* User.swift in Sources */,
+				44AFD1EE2A2513F000AF54F0 /* ForgotPasswordPresenter.swift in Sources */,
+				DD400FEA29DB283A00FF480E /* ViewController.swift in Sources */,
+				449627A229DCB6ED00156C6F /* ValidatorService.swift in Sources */,
+				DD400FF029DB283A00FF480E /* cryptobag.xcdatamodeld in Sources */,
+				4496278C29DB485300156C6F /* AlertManager.swift in Sources */,
+				DD400FE629DB283A00FF480E /* AppDelegate.swift in Sources */,
+				44AFD1EC2A2512B600AF54F0 /* RegisterPresenter.swift in Sources */,
+				449627A029DB6FF900156C6F /* LoginUserRequest.swift in Sources */,
+				4496278329DB33D000156C6F /* AuthView.swift in Sources */,
+				DD400FE829DB283A00FF480E /* SceneDelegate.swift in Sources */,
+				4496279329DB52E600156C6F /* RegisterUserRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD400FF729DB283B00FF480E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD40100029DB283B00FF480E /* cryptobagTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD40100129DB283B00FF480E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD40100C29DB283B00FF480E /* cryptobagUITestsLaunchTests.swift in Sources */,
+				DD40100A29DB283B00FF480E /* cryptobagUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD400FFD29DB283B00FF480E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD400FE129DB283A00FF480E /* cryptobag */;
+			targetProxy = DD400FFC29DB283B00FF480E /* PBXContainerItemProxy */;
+		};
+		DD40100729DB283B00FF480E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD400FE129DB283A00FF480E /* cryptobag */;
+			targetProxy = DD40100629DB283B00FF480E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DD400FF329DB283B00FF480E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD400FF429DB283B00FF480E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD40100D29DB283B00FF480E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DD40100E29DB283B00FF480E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD40101029DB283B00FF480E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = cryptobag/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CryptoBag;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = none.cryptobag;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DD40101129DB283B00FF480E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = cryptobag/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CryptoBag;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = none.cryptobag;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DD40101329DB283B00FF480E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = none.cryptobagTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cryptobag.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/cryptobag";
+			};
+			name = Debug;
+		};
+		DD40101429DB283B00FF480E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = none.cryptobagTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cryptobag.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/cryptobag";
+			};
+			name = Release;
+		};
+		DD40101629DB283B00FF480E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = none.cryptobagUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = cryptobag;
+			};
+			name = Debug;
+		};
+		DD40101729DB283B00FF480E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = none.cryptobagUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = cryptobag;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD400FDD29DB283A00FF480E /* Build configuration list for PBXProject "cryptobag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD40100D29DB283B00FF480E /* Debug */,
+				DD40100E29DB283B00FF480E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD40100F29DB283B00FF480E /* Build configuration list for PBXNativeTarget "cryptobag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD40101029DB283B00FF480E /* Debug */,
+				DD40101129DB283B00FF480E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD40101229DB283B00FF480E /* Build configuration list for PBXNativeTarget "cryptobagTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD40101329DB283B00FF480E /* Debug */,
+				DD40101429DB283B00FF480E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD40101529DB283B00FF480E /* Build configuration list for PBXNativeTarget "cryptobagUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD40101629DB283B00FF480E /* Debug */,
+				DD40101729DB283B00FF480E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4496276D29DB2F8E00156C6F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		4496279429DB55AA00156C6F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4496276E29DB2F8E00156C6F /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4496276D29DB2F8E00156C6F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		4496279529DB55AA00156C6F /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4496279429DB55AA00156C6F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		4496279729DB55AA00156C6F /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4496279429DB55AA00156C6F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		4496279929DB55AA00156C6F /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4496279429DB55AA00156C6F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		4496279B29DB55AA00156C6F /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4496279429DB55AA00156C6F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		4496279D29DB55AA00156C6F /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4496279429DB55AA00156C6F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		DD400FEE29DB283A00FF480E /* cryptobag.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DD400FEF29DB283A00FF480E /* cryptobag.xcdatamodel */,
+			);
+			currentVersion = DD400FEF29DB283A00FF480E /* cryptobag.xcdatamodel */;
+			path = cryptobag.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DD400FDA29DB283A00FF480E /* Project object */;
+}

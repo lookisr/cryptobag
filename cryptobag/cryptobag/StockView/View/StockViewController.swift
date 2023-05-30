@@ -26,6 +26,7 @@ class StockViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         title = ticker.name
+
         
         // Добавьте код для отображения детальной информации о ячейке
         let nameLabel = UILabel()
@@ -41,4 +42,5 @@ class StockViewController: UIViewController {
             nameLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
+
 }
