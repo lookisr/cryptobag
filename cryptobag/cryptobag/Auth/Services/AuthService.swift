@@ -39,7 +39,8 @@ class AuthService {
                 .document(resultUser.uid)
                 .setData([
                     "username":username,
-                    "email":email
+                    "email":email,
+                    "cost": Double(0)
                     
                 ]){
                     error in
@@ -97,8 +98,10 @@ class AuthService {
                    if let snapshot = snapshot,
                       let snapshotData = snapshot.data(),
                       let username = snapshotData["username"] as? String,
-                      let email = snapshotData["email"] as? String {
-                       let user = User(username: username, email: email, userUID: userUID)
+                      let email = snapshotData["email"] as? String,
+                      let cost = snapshotData["cost"] as? Double{
+                       let user = User(username: username, email: email, userUID: userUID, cost: 0)
+                       
                        completion(user, nil)
                    }
 

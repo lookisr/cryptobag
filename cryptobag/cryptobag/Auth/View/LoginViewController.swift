@@ -24,15 +24,20 @@ class LoginViewController: UIViewController, LoginViewProtocol {
     private let signInButton = CustomButton(title: "Sign In", hasBackground: true, fontSize: .big)
     private let newUserButton = CustomButton(title: "New User? Create Account", fontSize: .med)
     private let forgotPasswordButton = CustomButton(title: "Forgot Password?", fontSize: .small)
+    init(presenter: LoginPresenterProtocol) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
     
-    var presenter: LoginPresenterProtocol!
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    var presenter: LoginPresenterProtocol
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
-        presenter = LoginPresenter(view: self)
-        
+                
         signInButton.addTarget(self, action: #selector(didTabSignIn), for: .touchUpInside)
         newUserButton.addTarget(self, action: #selector(didTabNewUser), for: .touchUpInside)
         forgotPasswordButton.addTarget(self, action: #selector(didTabForgotPassword), for: .touchUpInside)
@@ -102,6 +107,7 @@ class LoginViewController: UIViewController, LoginViewProtocol {
     }
     
     @objc private func didTabNewUser() {
+        print(123)
         presenter.navigateToRegistrationScreen()
     }
     

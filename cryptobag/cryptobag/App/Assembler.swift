@@ -22,31 +22,56 @@ class MainModuleAssembly {
 
         return view
     }
-    
+    class func configureList() -> UIViewController {
+        let dataModule = DataModel()
+        let presenter = ListPresenter(dataService: dataModule)
+        let view = ListViewController(presenter: presenter)
+        view.presenter = presenter
+        presenter.listView = view
+        let vc = UINavigationController(rootViewController: view)
+        return vc
+    }
     class func configureStockScreen(ticker: Ticker) -> UIViewController {
         let presenter = StockViewPresenter()
         let view = StockViewController(ticker: ticker, presenter: presenter)
         view.presenter = presenter
         presenter.mainView = view
         presenter.router = MainRouter()
+        presenter.dataService = DataModel()
         return view
     }
     class func configureProfileScreen() -> UIViewController {
         let view = ProfileViewController()
         let presenter = ProfilePresenter(view: view)
+
         return view
     }
     
     class func configurePortfolioScreen() -> UIViewController {
         let view = PortfolioView()
-        let presenter = PortfolioPresenter()
+        let dataService = DataModel()
+        let presenter = PortfolioPresenter(dataService: dataService)
+        var tickers: [Ticker] = []
+        dataService.fetchDataTickers {result in
+            tickers = result
+            presenter.tickers = tickers
+
+        }
         presenter.portfolioView = view
         view.presenter = presenter
         return view
     }
+    class func configureAuth() -> UIViewController {
+        let presenter = LoginPresenter()
+        let view = LoginViewController(presenter: presenter)
+        presenter.view = view
+        let vc = UINavigationController(rootViewController: view)
+        return vc
+        
+    }
     func setupTabBar() -> UITabBarController {
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-              let window = windowScene.windows.first else {
+             let _ = windowScene.windows.first else {
             return UITabBarController()
         }
 
@@ -62,7 +87,7 @@ class MainModuleAssembly {
         let navigationController3 = UINavigationController(rootViewController: viewController3)
         navigationController1.navigationBar.isHidden = true
         navigationController2.navigationBar.isHidden = true
-        navigationController3.navigationBar.isHidden = true
+        navigationController3.navigationBar.isHidden = false
         tabBarController.tabBar.backgroundColor = .white
         tabBarController.tabBar.tintColor = .black
         tabBarController.tabBar.shadowImage = UIImage()

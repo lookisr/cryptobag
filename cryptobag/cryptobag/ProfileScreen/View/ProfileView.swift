@@ -23,40 +23,87 @@ class ProfileViewController: UIViewController, ProfileViewProtocol {
         indicator.style = .medium
         return indicator
     }()
-    
+    private var logoutButton: UIButton = {
+        let button = UIButton()
+        button.layer.cornerRadius = 10
+        button.backgroundColor = .white
+        return button
+    }()
     private var label: UILabel = {
         let label = UILabel()
         label.text = "543"
         return label
     }()
-    
+    private var settingsLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Settings"
+        label.font = UIFont(name: "MulishRoman-SemiBold", size: 16.0)
+        label.textColor = UIColor(red: 0.082, green: 0.174, blue: 0.026, alpha: 1)
+        return label
+    }()
+    private var logoutLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Logout"
+        label.font = UIFont(name: "MulishRoman-Bold", size: 16.0)
+        label.textColor = UIColor(red: 0.082, green: 0.174, blue: 0.026, alpha: 1)
+        return label
+    }()
     private var presenter: ProfilePresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
         label.text = "123/1233"
-        
         presenter = ProfilePresenter(view: self)
         setupUI()
         presenter.fetchUser()
     }
     
     private func setupUI() {
+        view.backgroundColor = UIColor(red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1.0)
         activityIndicator.startAnimating()
-        view.backgroundColor = .systemBackground
         view.addSubview(activityIndicator)
         view.addSubview(label)
-        
+        logoutButton.addAction(UIAction(handler: {_ in self.presenter.logout()}), for: .touchDown)
+        var stackView = UIButton()
+        stackView.addSubview(settingsLabel)
+        stackView.addSubview(logoutButton)
+        view.addSubview(stackView)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         label.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activate([
-            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            
-            label.topAnchor.constraint(equalTo: activityIndicator.bottomAnchor, constant: 12),
-        ])
+        activityIndicator.snp.makeConstraints{make in
+            make.centerX.equalTo(view.center.x)
+            make.centerY.equalTo(view.center.y)
+        }
+        label.snp.makeConstraints{make in
+            make.top.equalTo(view.snp.top).offset(100)
+            make.centerX.equalTo(view.center.x)
+            make.bottom.equalTo(activityIndicator.snp.top).offset(10)
+            make.height.equalTo(30)
+        }
+        stackView.snp.makeConstraints{ make in
+            make.top.equalTo(label.snp.bottom).offset(24)
+            make.left.equalTo(view.snp.left).offset(16)
+            make.right.equalTo(view.snp.right).offset(-16)
+            make.bottom.equalTo(view.snp.bottom).offset(10)
+        }
+        settingsLabel.snp.makeConstraints{ make in
+            make.top.equalTo(stackView.snp.top)
+            make.left.equalTo(stackView.snp.left)
+            make.height.equalTo(20)
+        }
+        logoutButton.snp.makeConstraints{ make in
+            make.top.equalTo(settingsLabel.snp.bottom).offset(12)
+            make.left.equalTo(stackView.snp.left)
+            make.right.equalTo(stackView.snp.right)
+            make.height.equalTo(68)
+            make.width.equalTo(358)
+        }
+        logoutButton.addSubview(logoutLabel)
+        logoutLabel.snp.makeConstraints{ make in
+            make.top.equalTo(logoutButton.snp.top).offset(16.5)
+            make.left.equalTo(logoutButton.snp.left).offset(50)
+        }
     }
     
     @objc private func didTapLogout() {
@@ -67,6 +114,9 @@ class ProfileViewController: UIViewController, ProfileViewProtocol {
     
     func showUserData(username: String, email: String) {
         label.text = "\(username)\n\(email)"
+        label.font = UIFont(name: "MulishRoman-Bold", size: 24.0)
+        label.textColor = UIColor(red: 0.082, green: 0.174, blue: 0.026, alpha: 1)
+        activityIndicator.stopAnimating()
     }
     
     func showFetchingUserError(with error: Error) {

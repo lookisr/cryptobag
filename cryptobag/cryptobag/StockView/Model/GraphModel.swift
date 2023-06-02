@@ -5,6 +5,10 @@
 //  Created by Rafael Shamsutdinov on 28.05.2023.
 //
 import Foundation
+struct ResponseGraphData: Decodable {
+    let high: Double
+    let low: Double
+}
 
 struct Graph: Decodable {
     let prices: [Price]
@@ -14,9 +18,9 @@ struct Graph: Decodable {
         let price: Double
     }
 }
-class graphData {
+class GraphData {
     // Генерация фейковых данных для заполнения структуры Graph
-    func generateFakeData() -> Graph {
+    class func generateFakeData(minPrice: Double, maxPrice: Double) -> Graph {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
@@ -27,7 +31,7 @@ class graphData {
         
         for i in 0..<10 {
             let currentDate = calendar.date(byAdding: .day, value: i, to: startDate!) // Генерируем последовательные даты
-            let randomPrice = Double.random(in: 1000...10000) // Генерируем случайную цену
+            let randomPrice = Double.random(in: minPrice...maxPrice) // Генерируем случайную цену в заданном диапазоне
             
             let price = Graph.Price(date: currentDate!, price: randomPrice)
             fakePrices.append(price)
@@ -36,4 +40,5 @@ class graphData {
         let graph = Graph(prices: fakePrices)
         return graph
     }
+
 }

@@ -78,6 +78,11 @@
 		DD88B26C2A1FD81400698501 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88B26B2A1FD81400698501 /* Router.swift */; };
 		DD88B26F2A1FDD7F00698501 /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88B26E2A1FDD7F00698501 /* StockViewController.swift */; };
 		DD88B2742A20935C00698501 /* StockViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88B2732A20935C00698501 /* StockViewPresenter.swift */; };
+		DDAF5EAC2A28A5CC00926BC5 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = DDAF5EAB2A28A5CC00926BC5 /* Charts */; };
+		DDAF5EAE2A28AFA000926BC5 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAF5EAD2A28AFA000926BC5 /* DateHelper.swift */; };
+		DDAF5EB02A2902D100926BC5 /* TokenList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAF5EAF2A2902D100926BC5 /* TokenList.swift */; };
+		DDAF5EB22A29032100926BC5 /* TokenListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAF5EB12A29032100926BC5 /* TokenListPresenter.swift */; };
+		DDAF5EB42A2904F800926BC5 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAF5EB32A2904F800926BC5 /* AmountView.swift */; };
 		DDFF651D29F03604003F64FF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DDFF651C29F03604003F64FF /* Alamofire */; };
 		DDFF654329F4033C003F64FF /* Tickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF654229F4033C003F64FF /* Tickers.swift */; };
 		DDFF654A29F65EDF003F64FF /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF654929F65EDF003F64FF /* CustomCell.swift */; };
@@ -145,10 +150,15 @@
 		DD81BFB62A26772800191E44 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		DD81BFBB2A2680A400191E44 /* portfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = portfolioView.swift; sourceTree = "<group>"; };
 		DD81BFBD2A2680E000191E44 /* PortfolioPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioPresenter.swift; sourceTree = "<group>"; };
+		DD81BFC22A28A01F00191E44 /* Charts */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Charts; path = "../../../../Library/Developer/Xcode/DerivedData/cryptobag-fdeinencjbovkufusswzjfghhjxe/SourcePackages/checkouts/Charts"; sourceTree = "<group>"; };
 		DD88B2682A1FD09D00698501 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		DD88B26B2A1FD81400698501 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		DD88B26E2A1FDD7F00698501 /* StockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewController.swift; sourceTree = "<group>"; };
 		DD88B2732A20935C00698501 /* StockViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewPresenter.swift; sourceTree = "<group>"; };
+		DDAF5EAD2A28AFA000926BC5 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		DDAF5EAF2A2902D100926BC5 /* TokenList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenList.swift; sourceTree = "<group>"; };
+		DDAF5EB12A29032100926BC5 /* TokenListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenListPresenter.swift; sourceTree = "<group>"; };
+		DDAF5EB32A2904F800926BC5 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 		DDFF654229F4033C003F64FF /* Tickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tickers.swift; sourceTree = "<group>"; };
 		DDFF654929F65EDF003F64FF /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		DDFF654B29F6641C003F64FF /* CoinsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsModel.swift; sourceTree = "<group>"; };
@@ -187,6 +197,7 @@
 				DD81BF362A25D7A200191E44 /* FirebaseAnalytics in Frameworks */,
 				DD81BF462A25D7A200191E44 /* FirebaseCrashlytics in Frameworks */,
 				DDFF651D29F03604003F64FF /* Alamofire in Frameworks */,
+				DDAF5EAC2A28A5CC00926BC5 /* Charts in Frameworks */,
 				DD81BF402A25D7A200191E44 /* FirebaseAppDistribution-Beta in Frameworks */,
 				DD81BF4C2A25D7A200191E44 /* FirebaseDynamicLinks in Frameworks */,
 				DD81BF522A25D7A200191E44 /* FirebaseFirestoreSwift in Frameworks */,
@@ -281,6 +292,7 @@
 		DD40100829DB283B00FF480E /* cryptobagUITests */ = {
 			isa = PBXGroup;
 			children = (
+				DD81BFC22A28A01F00191E44 /* Charts */,
 				DD40100929DB283B00FF480E /* cryptobagUITests.swift */,
 				DD40100B29DB283B00FF480E /* cryptobagUITestsLaunchTests.swift */,
 			);
@@ -432,6 +444,8 @@
 			isa = PBXGroup;
 			children = (
 				DD81BFBB2A2680A400191E44 /* portfolioView.swift */,
+				DDAF5EAF2A2902D100926BC5 /* TokenList.swift */,
+				DDAF5EB32A2904F800926BC5 /* AmountView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -440,6 +454,7 @@
 			isa = PBXGroup;
 			children = (
 				DD81BFBD2A2680E000191E44 /* PortfolioPresenter.swift */,
+				DDAF5EB12A29032100926BC5 /* TokenListPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -474,6 +489,7 @@
 			isa = PBXGroup;
 			children = (
 				DD3E56EA2A23C71600ABC01B /* GraphModel.swift */,
+				DDAF5EAD2A28AFA000926BC5 /* DateHelper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -561,6 +577,7 @@
 				DD81BF652A25D7A200191E44 /* FirebaseRemoteConfigSwift */,
 				DD81BF672A25D7A200191E44 /* FirebaseStorage */,
 				DD81BF692A25D7A200191E44 /* FirebaseStorageCombine-Community */,
+				DDAF5EAB2A28A5CC00926BC5 /* Charts */,
 			);
 			productName = cryptobag;
 			productReference = DD400FE229DB283A00FF480E /* cryptobag.app */;
@@ -639,6 +656,7 @@
 				DDFF651B29F03604003F64FF /* XCRemoteSwiftPackageReference "Alamofire" */,
 				DD11D60529FC325700A92C1B /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				DD81BF342A25D7A200191E44 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				DDAF5EAA2A28A5CC00926BC5 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = DD400FE329DB283A00FF480E /* Products */;
 			projectDirPath = "";
@@ -686,6 +704,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDAF5EB22A29032100926BC5 /* TokenListPresenter.swift in Sources */,
 				DD81BFA82A25D9A000191E44 /* LoginViewController.swift in Sources */,
 				DD11D60B29FC46D000A92C1B /* CoinData.swift in Sources */,
 				DD40104929E67DC200FF480E /* DataService.swift in Sources */,
@@ -695,6 +714,7 @@
 				DD40104629E3217700FF480E /* HomeView.swift in Sources */,
 				DD40104C29E67DF100FF480E /* MainPresenter.swift in Sources */,
 				DDFF654E29F6F138003F64FF /* Assembler.swift in Sources */,
+				DDAF5EAE2A28AFA000926BC5 /* DateHelper.swift in Sources */,
 				DD88B26F2A1FDD7F00698501 /* StockViewController.swift in Sources */,
 				DD81BFAF2A25D9A000191E44 /* ValidatorService.swift in Sources */,
 				DD81BFA62A25D9A000191E44 /* ForgotPasswordViewController.swift in Sources */,
@@ -713,6 +733,7 @@
 				DD81BFAD2A25D9A000191E44 /* AlertManager.swift in Sources */,
 				DDFF654A29F65EDF003F64FF /* CustomCell.swift in Sources */,
 				DD400FF029DB283A00FF480E /* cryptobag.xcdatamodeld in Sources */,
+				DDAF5EB02A2902D100926BC5 /* TokenList.swift in Sources */,
 				DD400FE629DB283A00FF480E /* AppDelegate.swift in Sources */,
 				DD81BFB52A2673D200191E44 /* ProfileView.swift in Sources */,
 				DD81BFA02A25D9A000191E44 /* LoginViewPresenter.swift in Sources */,
@@ -723,6 +744,7 @@
 				DD81BFAE2A25D9A000191E44 /* AuthService.swift in Sources */,
 				DD88B2692A1FD09D00698501 /* ImageHelper.swift in Sources */,
 				DD81BFA92A25D9A000191E44 /* RegisterViewController.swift in Sources */,
+				DDAF5EB42A2904F800926BC5 /* AmountView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -820,10 +842,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = cryptobag;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -874,9 +897,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = cryptobag;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -889,8 +913,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VWZ3LD85XN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = cryptobag/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -902,8 +928,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = none.cryptobag;
+				PRODUCT_BUNDLE_IDENTIFIER = cryptobag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -915,8 +942,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VWZ3LD85XN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = cryptobag/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -928,8 +957,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = none.cryptobag;
+				PRODUCT_BUNDLE_IDENTIFIER = cryptobag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1072,6 +1102,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 10.0.0;
+			};
+		};
+		DDAF5EAA2A28A5CC00926BC5 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = exactVersion;
+				version = 4.1.0;
 			};
 		};
 		DDFF651B29F03604003F64FF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
@@ -1229,6 +1267,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DD81BF342A25D7A200191E44 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		DDAF5EAB2A28A5CC00926BC5 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDAF5EAA2A28A5CC00926BC5 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
 		};
 		DDFF651C29F03604003F64FF /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

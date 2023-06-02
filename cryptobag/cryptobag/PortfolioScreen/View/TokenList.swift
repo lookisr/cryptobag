@@ -1,21 +1,21 @@
 //
-//  HomeView.swift
+//  TokenList.swift
 //  cryptobag
 //
-//  Created by Rafael Shamsutdinov on 09.04.2023.
+//  Created by Rafael Shamsutdinov on 01.06.2023.
 //
+
 import Foundation
 import UIKit
-import SnapKit
 
-class MainViewController: UIViewController {
-    var presenter: MainPresenterProtocol
+
+class ListViewController: UIViewController {
+    var presenter: ListPresenterProtocol
     lazy var layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: view.bounds.width, height: 88.0)
         layout.minimumLineSpacing = 8
         layout.scrollDirection = .vertical
-//        layout.sectionInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
         return layout
     }()
     
@@ -42,7 +42,7 @@ class MainViewController: UIViewController {
         return searcher
     }()
     
-    init(presenter: MainPresenterProtocol) {
+    init(presenter: ListPresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
@@ -112,7 +112,7 @@ class MainViewController: UIViewController {
     
 }
     
-extension MainViewController: UICollectionViewDataSource {
+extension ListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return presenter.tickers.count
     }
@@ -134,14 +134,14 @@ extension MainViewController: UICollectionViewDataSource {
     }
 
 }
-extension MainViewController: UICollectionViewDelegate {
+extension ListViewController: UICollectionViewDelegate {
     func tableView(_ tableView: UICollectionView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 88.0
     }
         
 }
 
-extension MainViewController: UISearchBarDelegate {
+extension ListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchText = searchBar.text else { return }
         presenter.search(for: searchText)
@@ -154,16 +154,4 @@ extension MainViewController: UISearchBarDelegate {
         searchBar.resignFirstResponder()
     }
 }
-
-//extension MainViewController: MainViewProtocol {
-//    func updateView() {
-//        print("view updated")
-//        tableView.reloadData()
-//    }
-//
-//    func updateCell(for indexPath: IndexPath) {
-//        tableView.reloadRows(at: [indexPath], with: .none)
-//    }
-//
-
 

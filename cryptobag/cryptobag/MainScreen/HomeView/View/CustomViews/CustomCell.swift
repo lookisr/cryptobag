@@ -51,10 +51,15 @@ class CustomCell: UICollectionViewCell {
 
         return label
     }()
-    
+
     private lazy var coinChange1dLabel: UILabel = {
-        let label = UILabel()
-        return label
+        var view = UILabel()
+        view.layer.frame = CGRect(x: 0, y: 0, width: 55, height: 22)
+        view.layer.backgroundColor = UIColor(red: 0, green: 0.796, blue: 0.414, alpha: 0.8).cgColor
+        view.layer.cornerRadius = 8
+        view.font = UIFont(name: "MulishRoman-Bold", size: 12.0)
+        view.textColor = .white
+        return view
     }()
     
     lazy var image: UIImageView = {
@@ -73,6 +78,11 @@ class CustomCell: UICollectionViewCell {
         self.coinNameLabel.text = model.name
         self.coinSymbolLabel.text = "\(model.symbol)/USDT"
         self.priceLabel.text = "$\(round(model.quotes.first!.value.price * 100) / 100.0)"
+        if model.quotes.first!.value.percentChange24h < 0 {
+            self.coinChange1dLabel.layer.backgroundColor = UIColor(red: 0.948, green: 0.401, blue: 0.401, alpha: 0.8).cgColor
+        } else { self.coinChange1dLabel.layer.backgroundColor =  UIColor(red: 0, green: 0.796, blue: 0.414, alpha: 0.8).cgColor }
+        self.coinChange1dLabel.text = "\(model.quotes.first!.value.percentChange24h)%"
+        
     }
     
     private func setUpViews() {
@@ -111,6 +121,7 @@ class CustomCell: UICollectionViewCell {
         priceLabel.snp.makeConstraints{make in
             make.top.equalTo(cellView.snp.top).offset(18)
             make.right.equalTo(cellView.snp.right).offset(-16)
+            make.height.equalTo(22)
         }
         image.snp.makeConstraints{make in
             make.center.equalTo(imageContainer.snp.center)
@@ -118,7 +129,15 @@ class CustomCell: UICollectionViewCell {
             make.left.equalTo(imageContainer.snp.left).offset(10)
             make.right.equalTo(imageContainer.snp.right).offset(-10)
             make.bottom.equalTo(imageContainer.snp.bottom).offset(-10)
-
         }
+        coinChange1dLabel.snp.makeConstraints{make in
+            make.top.equalTo(priceLabel.snp.bottom).offset(4)
+            make.right.equalTo(cellView.snp.right).offset(-16)
+            make.bottom.equalTo(cellView.snp.bottom).offset(-20)
+            make.left.equalTo(cellView.snp.left).offset(287)
+            make.width.equalTo(55)
+            make.height.equalTo(22)
+        }
+        coinChange1dLabel.textAlignment = .center
     }
 }

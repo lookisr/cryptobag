@@ -17,9 +17,6 @@ class LoginPresenter: LoginPresenterProtocol {
     
     weak var view: LoginViewProtocol?
     
-    init(view: LoginViewProtocol) {
-        self.view = view
-    }
     
     func signIn(with request: LoginUserRequest) {
         if !Validator.isValidEmail(for: request.email) {

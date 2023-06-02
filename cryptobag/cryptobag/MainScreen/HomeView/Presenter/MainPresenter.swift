@@ -18,6 +18,8 @@ protocol MainPresenterProtocol {
     var tickers: [Ticker] {get}
     var mainView: MainViewController? {get set}
     func loadView()
+    func search(for query: String)
+    func cancelSearch()
     func model(for indexPath: Int) -> Ticker
     func getImageForCoin(id: String, indexPath: IndexPath)
     func openCell(with ticker: Ticker)
@@ -25,6 +27,18 @@ protocol MainPresenterProtocol {
 
 
 class MainPresenter: MainPresenterProtocol {
+    var originalTickers: [Ticker]?
+    func search(for query: String) {
+        let filteredTickers = tickers.filter { $0.name.lowercased().contains(query.lowercased()) }
+        self.tickers = filteredTickers
+        mainView?.updateView()
+    }
+    
+    func cancelSearch() {
+        self.tickers = originalTickers!
+        mainView?.updateView()
+    }
+    
     
     private let dataService: DataModel
     var router: MainRouterProtocol?
@@ -39,6 +53,7 @@ class MainPresenter: MainPresenterProtocol {
         dataService.fetchDataTickers {result in
             self.mainView?.updateView()
             self.tickers = result
+            self.originalTickers = result
             print("trying to load view")
             self.mainView?.updateView()
         }
