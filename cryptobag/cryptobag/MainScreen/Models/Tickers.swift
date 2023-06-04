@@ -6,13 +6,10 @@
 //
 
 import Foundation
-//public struct CryptoCurrencys: Decodable {
-//    public let tickers: [Ticker]
-//}
-
-/// Coin Ticker
 
 public struct Ticker: Decodable {
+    
+    public var totals:Double!
     
     /// Coin id, eg. btc-bitcoin
     public let id: String
@@ -55,6 +52,7 @@ public struct Ticker: Decodable {
     public let quotes: [String: Quote]
     
     enum CodingKeys: String, CodingKey {
+        case totals
         case id
         case name
         case symbol
@@ -72,7 +70,7 @@ public struct Ticker: Decodable {
     public struct Quote: Codable, Equatable {
         
         /// Price
-        public let price: Double
+        public var price: Double
         
         /// Volume from last 24h
         public let volume24h: Decimal

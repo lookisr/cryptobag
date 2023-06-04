@@ -4,11 +4,11 @@
 //
 //  Created by Rafael Shamsutdinov on 01.06.2023.
 //
-
+import UserNotifications
 import Foundation
 import UIKit
 
-class AmountViewController: UIViewController, UITextFieldDelegate{
+class AmountViewController: UIViewController, UITextFieldDelegate,UNUserNotificationCenterDelegate{
     var ticker: Ticker
     var amount: Double?
     var presenter: ListPresenter?
@@ -53,7 +53,13 @@ class AmountViewController: UIViewController, UITextFieldDelegate{
         inputField.delegate = self
         disableButton()
         addButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        UNUserNotificationCenter.current().delegate = self
+        
     }
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+           completionHandler([.alert])
+       }
+    
     func setupUI() {
         view.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
         view.addSubview(addButton)
@@ -83,6 +89,8 @@ class AmountViewController: UIViewController, UITextFieldDelegate{
     @objc func buttonTapped() {
         let amount = Double(inputField.text!)
         presenter!.addButtonTapped(ticker: self.ticker, amount: amount!)
+        presenter!.push(name: ticker.name)
+        
         }
     func disableButton() {
         addButton.isEnabled = false
@@ -96,20 +104,13 @@ class AmountViewController: UIViewController, UITextFieldDelegate{
     func textFieldDidChangeSelection(_ textField: UITextField) {
         if let text = textField.text {
             if let intValue = Int(text) {
-                // Если значение может быть преобразовано в Int,
-                // считаем его допустимым
                 enableButton()
             } else if let doubleValue = Double(text) {
-                // Если значение может быть преобразовано в Double,
-                // считаем его допустимым
                 enableButton()
             } else {
-                // Если значение не может быть преобразовано ни в Int, ни в Double,
-                // считаем его недопустимым
                 disableButton()
             }
         } else {
-            // Если значение пустое, отключаем кнопку
             disableButton()
             
         }

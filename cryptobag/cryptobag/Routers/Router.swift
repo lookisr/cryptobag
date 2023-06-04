@@ -11,7 +11,6 @@ import UIKit
 protocol MainRouterProtocol: AnyObject {
     var homeView: MainViewController? {get set}
     var stockView: StockViewController? {get set}
-    func navigateToAnotherScreen()
     func moveToDetailedScreen(with ticker: Ticker)
     func moveToPortfolio()
     func moveToProfileSettings()
@@ -39,8 +38,6 @@ class MainRouter: MainRouterProtocol {
 
 
 
-    func navigateToAnotherScreen() {
-    }
 
 }
 

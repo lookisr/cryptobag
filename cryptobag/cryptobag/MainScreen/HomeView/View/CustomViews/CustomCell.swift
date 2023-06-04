@@ -9,8 +9,13 @@ import Foundation
 import UIKit
 //import SnapKit
 
+protocol CustomCellDelegate: AnyObject {
+    func sellButtonTapped(in cell: CustomCell)
+}
 
 class CustomCell: UICollectionViewCell {
+    weak var delegate: CustomCellDelegate?
+
     lazy var cellView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -43,7 +48,13 @@ class CustomCell: UICollectionViewCell {
         label.font = UIFont(name: "MulishRoman-Bold", size: 20.0)
         return label
     }()
-    
+    lazy var sellButton: UIButton = {
+        let view = UIButton()
+        view.layer.backgroundColor = UIColor(named: "red")?.cgColor
+        view.setTitle("Sell", for: .normal)
+        view.isHidden = true
+        return view
+    }()
     private lazy var priceLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(red: 21.0/255.0, green: 44.0/255.0, blue: 7.0/255.0, alpha: 1.0)
@@ -77,7 +88,11 @@ class CustomCell: UICollectionViewCell {
     func configure(with model: Ticker){
         self.coinNameLabel.text = model.name
         self.coinSymbolLabel.text = "\(model.symbol)/USDT"
-        self.priceLabel.text = "$\(round(model.quotes.first!.value.price * 100) / 100.0)"
+        if let totals = model.totals {
+            self.priceLabel.text = "$\(round(model.totals * 100) / 100.0)"
+        }else{
+            self.priceLabel.text = "$\(round(model.quotes.first!.value.price * 100) / 100.0)"
+        }
         if model.quotes.first!.value.percentChange24h < 0 {
             self.coinChange1dLabel.layer.backgroundColor = UIColor(red: 0.948, green: 0.401, blue: 0.401, alpha: 0.8).cgColor
         } else { self.coinChange1dLabel.layer.backgroundColor =  UIColor(red: 0, green: 0.796, blue: 0.414, alpha: 0.8).cgColor }
@@ -89,11 +104,15 @@ class CustomCell: UICollectionViewCell {
         
         contentView.addSubview(cellView)
         cellView.layer.cornerRadius = 10
-        let cellSubViews = [coinNameLabel, priceLabel, coinChange1dLabel, imageContainer, coinSymbolLabel]
+        let cellSubViews = [coinNameLabel, priceLabel, coinChange1dLabel, imageContainer, coinSymbolLabel, sellButton]
         cellSubViews.forEach { subView in
             cellView.addSubview(subView)
         }
     }
+    
+    @objc func sellButtonTapped() {
+            delegate?.sellButtonTapped(in: self)
+        }
     private func setUpConstraints(){
         
         cellView.snp.makeConstraints{make in
@@ -137,6 +156,9 @@ class CustomCell: UICollectionViewCell {
             make.left.equalTo(cellView.snp.left).offset(287)
             make.width.equalTo(55)
             make.height.equalTo(22)
+        }
+        sellButton.snp.makeConstraints{ make in
+            make.center.equalTo(cellView.snp.center)
         }
         coinChange1dLabel.textAlignment = .center
     }

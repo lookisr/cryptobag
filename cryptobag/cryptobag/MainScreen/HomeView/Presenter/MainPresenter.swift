@@ -8,12 +8,6 @@
 import Foundation
 import UIKit
 
-//protocol MainViewProtocol: AnyObject {
-//    func updateView()
-//    func updateCell(for indexPath: IndexPath)
-//    func updateView(withLoader isLoading: Bool)
-//}
-
 protocol MainPresenterProtocol {
     var tickers: [Ticker] {get}
     var mainView: MainViewController? {get set}

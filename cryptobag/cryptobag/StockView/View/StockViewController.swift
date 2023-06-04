@@ -83,6 +83,14 @@ class StockViewController: UIViewController {
         view.numberOfLines = 2
         return view
     }()
+    private lazy var addButton: UIButton = {
+        let view = UIButton()
+        view.layer.frame = CGRect(x: 0, y: 0, width: 155, height: 75)
+        view.layer.backgroundColor = UIColor(named: "systemGreen")?.cgColor
+        view.setTitle("Add more", for: .normal)
+        view.titleLabel?.font = UIFont(name: "MulishRoman-Bold", size: 15.0)
+        return view
+    }()
     init(ticker: Ticker, presenter: StockPresenterProtocol) {
         self.ticker = ticker
         self.presenter = presenter
@@ -233,4 +241,5 @@ class StockViewController: UIViewController {
         configureChart()
     
     }
+
 }

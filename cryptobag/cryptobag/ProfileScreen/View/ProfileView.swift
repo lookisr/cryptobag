@@ -29,6 +29,14 @@ class ProfileViewController: UIViewController, ProfileViewProtocol {
         button.backgroundColor = .white
         return button
     }()
+    private var imageView: UIImageView = {
+        let view = UIImageView()
+        view.image = UIImage(systemName: "door.left.hand.open")
+        view.layer.backgroundColor = UIColor(named:"gray")?.cgColor
+        view.tintColor = .systemGreen
+        view.layer.cornerRadius = 10
+        return view
+    }()
     private var label: UILabel = {
         let label = UILabel()
         label.text = "543"
@@ -63,10 +71,12 @@ class ProfileViewController: UIViewController, ProfileViewProtocol {
         activityIndicator.startAnimating()
         view.addSubview(activityIndicator)
         view.addSubview(label)
+        
         logoutButton.addAction(UIAction(handler: {_ in self.presenter.logout()}), for: .touchDown)
-        var stackView = UIButton()
-        stackView.addSubview(settingsLabel)
+        let stackView = UIButton()
+        view.addSubview(settingsLabel)
         stackView.addSubview(logoutButton)
+        stackView.addSubview(imageView)
         view.addSubview(stackView)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -88,8 +98,8 @@ class ProfileViewController: UIViewController, ProfileViewProtocol {
             make.bottom.equalTo(view.snp.bottom).offset(10)
         }
         settingsLabel.snp.makeConstraints{ make in
-            make.top.equalTo(stackView.snp.top)
-            make.left.equalTo(stackView.snp.left)
+            make.top.equalTo(label.snp.bottom).offset(10)
+            make.left.equalTo(view.snp.left).offset(16)
             make.height.equalTo(20)
         }
         logoutButton.snp.makeConstraints{ make in
@@ -99,10 +109,17 @@ class ProfileViewController: UIViewController, ProfileViewProtocol {
             make.height.equalTo(68)
             make.width.equalTo(358)
         }
+        imageView.snp.makeConstraints{make in
+            make.top.equalTo(stackView.snp.top).offset(32)
+            make.left.equalTo(stackView.snp.left).offset(16)
+            make.height.equalTo(44)
+            make.width.equalTo(44)
+            
+        }
         logoutButton.addSubview(logoutLabel)
         logoutLabel.snp.makeConstraints{ make in
-            make.top.equalTo(logoutButton.snp.top).offset(16.5)
-            make.left.equalTo(logoutButton.snp.left).offset(50)
+            make.top.equalTo(logoutButton.snp.top).offset(24)
+            make.left.equalTo(imageView.snp.right).offset(10)
         }
     }
     

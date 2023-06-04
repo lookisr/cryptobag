@@ -57,6 +57,7 @@ class ListPresenter: ListPresenterProtocol {
         let vc = AmountViewController(ticker: ticker)
         vc.presenter = self
         listView?.navigationController?.present(vc, animated: true)
+       
     }
     
     func model(for indexPath: Int) -> Ticker {
@@ -72,17 +73,27 @@ class ListPresenter: ListPresenterProtocol {
                 switch result {
                 case .success(let image):
                     self.tickers[indexPath.row].logo = image.logo
-                    // Кеширование ссылки на изображение
                     ImageHelper.shared.cacheImageURL(for: id, link: image.logo)
                 case .failure(let error):
-                    // Обработка ошибки
                     print("Ошибка при загрузке изображения: \(error.localizedDescription)")
-                    // Установка плейсхолдер-изображения
                     self.tickers[indexPath.row].logo = "https://www.svgrepo.com/show/135240/bitcoin-placeholder.svg"
                 }
             }
         }
     }
+    
+    func push(name:String){
+        let content = UNMutableNotificationContent()
+               content.title = "Добавлено в портфель"
+               content.body = "\(name) добавлено в ваш портфель"
+               content.sound = UNNotificationSound.default
+
+               let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+               let request = UNNotificationRequest(identifier: "addToPortfolio", content: content, trigger: trigger)
+
+               UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
+    
     func addButtonTapped(ticker: Ticker, amount: Double) {
         print(ticker.name, amount)
         AuthService.shared.fetchUser { [weak self] user, error in
@@ -90,13 +101,13 @@ class ListPresenter: ListPresenterProtocol {
                 let db = Firestore.firestore()
                 let userDocument = db.collection("users").document(user.userUID)
                 let tokenCollection = userDocument.collection("tokens")
-                let tokenId = "\(ticker.id)" // Token identifier
-                let amount = amount // Quantity to add
+                let tokenId = "\(ticker.id)"
+                let amount = amount
                 
                 let tokenDocument = tokenCollection.document(tokenId)
                 tokenDocument.getDocument { document, error in
                     if let document = document, document.exists {
-                        // Token document already exists, update the quantity
+                       
                         if let currentQuantity = document.data()?["quantity"] as? Double {
                             let newQuantity = currentQuantity + amount
                             
@@ -109,7 +120,7 @@ class ListPresenter: ListPresenterProtocol {
                             }
                         }
                     } else {
-                        // Token document doesn't exist, create it with the initial quantity
+                        
                         let data: [String: Any] = ["quantity": amount]
                         
                         tokenDocument.setData(data, merge: true) { error in

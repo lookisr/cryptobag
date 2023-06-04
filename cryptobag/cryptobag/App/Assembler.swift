@@ -22,6 +22,12 @@ class MainModuleAssembly {
 
         return view
     }
+    class func configureAmountView(with ticker: Ticker) -> UIViewController {
+        let view = AmountViewController(ticker: ticker)
+        let presenter = ListPresenter(dataService: DataModel())
+        view.presenter = presenter
+        return view
+    }
     class func configureList() -> UIViewController {
         let dataModule = DataModel()
         let presenter = ListPresenter(dataService: dataModule)
@@ -37,6 +43,7 @@ class MainModuleAssembly {
         view.presenter = presenter
         presenter.mainView = view
         presenter.router = MainRouter()
+        presenter.router?.stockView = view
         presenter.dataService = DataModel()
         return view
     }

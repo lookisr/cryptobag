@@ -155,15 +155,4 @@ extension MainViewController: UISearchBarDelegate {
     }
 }
 
-//extension MainViewController: MainViewProtocol {
-//    func updateView() {
-//        print("view updated")
-//        tableView.reloadData()
-//    }
-//
-//    func updateCell(for indexPath: IndexPath) {
-//        tableView.reloadRows(at: [indexPath], with: .none)
-//    }
-//
-
 

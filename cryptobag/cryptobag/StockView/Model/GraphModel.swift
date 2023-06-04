@@ -27,11 +27,10 @@ class GraphData {
         var fakePrices = [Graph.Price]()
         
         let calendar = Calendar.current
-        let startDate = calendar.date(byAdding: .day, value: -9, to: Date()) // Вычисляем дату начала (за 10 дней назад)
-        
+        let startDate = calendar.date(byAdding: .day, value: -9, to: Date())
         for i in 0..<10 {
-            let currentDate = calendar.date(byAdding: .day, value: i, to: startDate!) // Генерируем последовательные даты
-            let randomPrice = Double.random(in: minPrice...maxPrice) // Генерируем случайную цену в заданном диапазоне
+            let currentDate = calendar.date(byAdding: .day, value: i, to: startDate!)
+            let randomPrice = Double.random(in: minPrice...maxPrice)
             
             let price = Graph.Price(date: currentDate!, price: randomPrice)
             fakePrices.append(price)
