@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DD11D60329FA6ADE00A92C1B /* Mulish-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD11D60229FA6A6A00A92C1B /* Mulish-Italic-VariableFont_wght.ttf */; };
-		DD11D60429FA6AE300A92C1B /* Mulish-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD11D60129FA6A6A00A92C1B /* Mulish-VariableFont_wght.ttf */; };
+		4461B66D2A2D124400A10DAF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4461B66C2A2D124400A10DAF /* GoogleService-Info.plist */; };
 		DD11D60929FC404F00A92C1B /* UIImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD11D60829FC404F00A92C1B /* UIImageLoader.swift */; };
 		DD11D60B29FC46D000A92C1B /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD11D60A29FC46CF00A92C1B /* CoinData.swift */; };
 		DD11D63129FEE76700A92C1B /* 3524335.png in Resources */ = {isa = PBXBuildFile; fileRef = DD11D63029FEE76700A92C1B /* 3524335.png */; };
@@ -56,7 +55,6 @@
 		DD40104629E3217700FF480E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40104529E3217700FF480E /* HomeView.swift */; };
 		DD40104929E67DC200FF480E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40104829E67DC200FF480E /* DataService.swift */; };
 		DD40104C29E67DF100FF480E /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40104B29E67DF100FF480E /* MainPresenter.swift */; };
-		DD81BF332A25D10100191E44 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD81BF322A25D10100191E44 /* GoogleService-Info.plist */; };
 		DD81BF9F2A25D9A000191E44 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81BF8A2A25D9A000191E44 /* RegisterPresenter.swift */; };
 		DD81BFA02A25D9A000191E44 /* LoginViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81BF8B2A25D9A000191E44 /* LoginViewPresenter.swift */; };
 		DD81BFA12A25D9A000191E44 /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81BF8C2A25D9A000191E44 /* ForgotPasswordPresenter.swift */; };
@@ -107,8 +105,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DD11D60129FA6A6A00A92C1B /* Mulish-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mulish-VariableFont_wght.ttf"; path = "../../../../../Downloads/Mulish/Mulish-VariableFont_wght.ttf"; sourceTree = "<group>"; };
-		DD11D60229FA6A6A00A92C1B /* Mulish-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Mulish-Italic-VariableFont_wght.ttf"; path = "../../../../../Downloads/Mulish/Mulish-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		4461B66A2A2D123800A10DAF /* Mulish-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		4461B66B2A2D123800A10DAF /* Mulish-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		4461B66C2A2D124400A10DAF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DD11D60829FC404F00A92C1B /* UIImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageLoader.swift; sourceTree = "<group>"; };
 		DD11D60A29FC46CF00A92C1B /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
 		DD11D63029FEE76700A92C1B /* 3524335.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3524335.png; path = ../../../../Downloads/3524335.png; sourceTree = "<group>"; };
@@ -129,7 +128,6 @@
 		DD40104529E3217700FF480E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DD40104829E67DC200FF480E /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		DD40104B29E67DF100FF480E /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
-		DD81BF322A25D10100191E44 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Desktop/s1-lookisr/web/static/images/cryptobag-main/cryptobag/cryptobag/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DD81BF8A2A25D9A000191E44 /* RegisterPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		DD81BF8B2A25D9A000191E44 /* LoginViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewPresenter.swift; sourceTree = "<group>"; };
 		DD81BF8C2A25D9A000191E44 /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
@@ -222,8 +220,8 @@
 		DD11D60029FA6A5600A92C1B /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				DD11D60229FA6A6A00A92C1B /* Mulish-Italic-VariableFont_wght.ttf */,
-				DD11D60129FA6A6A00A92C1B /* Mulish-VariableFont_wght.ttf */,
+				4461B66A2A2D123800A10DAF /* Mulish-Italic-VariableFont_wght.ttf */,
+				4461B66B2A2D123800A10DAF /* Mulish-VariableFont_wght.ttf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -274,7 +272,7 @@
 				DD400FF329DB283B00FF480E /* LaunchScreen.storyboard */,
 				DD400FF629DB283B00FF480E /* Info.plist */,
 				DD400FEE29DB283A00FF480E /* cryptobag.xcdatamodeld */,
-				DD81BF322A25D10100191E44 /* GoogleService-Info.plist */,
+				4461B66C2A2D124400A10DAF /* GoogleService-Info.plist */,
 			);
 			path = cryptobag;
 			sourceTree = "<group>";
@@ -673,10 +671,8 @@
 			files = (
 				DD11D63129FEE76700A92C1B /* 3524335.png in Resources */,
 				DD400FF529DB283B00FF480E /* LaunchScreen.storyboard in Resources */,
-				DD11D60429FA6AE300A92C1B /* Mulish-VariableFont_wght.ttf in Resources */,
 				DD400FF229DB283B00FF480E /* Assets.xcassets in Resources */,
-				DD11D60329FA6ADE00A92C1B /* Mulish-Italic-VariableFont_wght.ttf in Resources */,
-				DD81BF332A25D10100191E44 /* GoogleService-Info.plist in Resources */,
+				4461B66D2A2D124400A10DAF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

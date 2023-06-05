@@ -93,7 +93,7 @@ class RegisterViewController: UIViewController, RegisterView {
     }
     
     @objc private func didTapSignIn() {
-        let vc = ProfileViewController()
+        let vc = MainModuleAssembly.configureAuth()
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: false, completion: nil)
     }
